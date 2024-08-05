@@ -1,5 +1,5 @@
 import { Times } from "@/icons";
-import { OrganizationSwitcher, SignedIn, UserButton } from "@clerk/nextjs";
+import { OrganizationSwitcher, SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -53,6 +53,9 @@ export default function Header() {
           }}
         />
       </SignedIn>
+      <SignedOut>
+        <SignInButton />
+      </SignedOut>
     </header>
   );
 }
